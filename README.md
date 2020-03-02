@@ -7,7 +7,6 @@ Search engines are extremely powerful machines. The algorithms behind these mach
 
 But what would happen if a single website had an infinite number of subpages that are all linked to each other? This is exactly what the project NOTENO does. The page itself consists of only a few kilobytes and less than 10 files, but offers an infinite number of pages that are all filled with total nonsense.
 
-
 Get the code from github and start feeding...
 
 
