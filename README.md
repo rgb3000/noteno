@@ -8,7 +8,7 @@ But what would happen if a single website had an infinite number of subpages tha
 
 Get the code from github and start feeding...
 
-# Install
+## Install
 Via terminal:
 ```
 git clone https://github.com/rgb3000/noteno
