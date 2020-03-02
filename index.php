@@ -73,10 +73,11 @@ if($page !== 'stats'){
         <th>data_volume_sent</th>
 		<th>last visit</th>
     </tr>
-    <?php $c = 0; ?>
+    <?php $c = 0; $totalBytes = 0; $totalPageViews = 0; ?>
 	<?php foreach($stats->getStatsData() as $d): ?>
 		<tr style="background-color: rgba(<?=(250-$c)?>,<?=(200-$c)?>,50,0.5);">
-			<td><?=$d['user_agent']?> <?php if($d['user_agent'] != 'human'):?> (BOT)<?php endif ?></td>
+        <?php $totalBytes +=  $d['total_bytes']; $totalPageViews += $d['pageviews']; ?> 
+        <td><?=$d['user_agent']?> <?php if($d['user_agent'] != 'human'):?> (BOT)<?php endif ?></td>
             <td><?=$d['pageviews']?></th>
             <?php if($d['total_bytes']/1024/1024 > 1024): ?>
                 <td><?=round($d['total_bytes']/1024/1024/1024,3)?> !!GIGABYTES!!</th>
@@ -86,7 +87,12 @@ if($page !== 'stats'){
             <td><?=date('Y-m-d H:i',$d['updated_at'])?></th>
         </tr>
         <?php $c+=2; ?>
-	<?php endforeach ?>
+    <?php endforeach ?>
+    <tr>
+        <td><b>total</b></td>
+        <td><b><?=$totalPageViews?></b></td>
+        <td><b><?=round($totalBytes/1024/1024/1024,3)?> GIGABYTES</b></td>
+    </tr>
     </table>
     
     <?php elseif($page == 'about'): //---------------------------------------------- ?>   
