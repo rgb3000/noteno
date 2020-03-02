@@ -1,5 +1,3 @@
-# noteno
-
 # Noteno (non terminating nonsense)
 
 
@@ -9,5 +7,12 @@ But what would happen if a single website had an infinite number of subpages tha
 
 Get the code from github and start feeding...
 
+# Install
+Via terminal:
+```
+git clone https://github.com/rgb3000/noteno
+````
+
+Or just download all files and upload to your webspace.
 
 ![noteno screenshot animated](https://raw.githubusercontent.com/rgb3000/noteno/master/noteno.gif)
