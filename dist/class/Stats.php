@@ -36,6 +36,7 @@ public function incrementData($bytes){
 
     $this->db = new PDO('sqlite:stats.db');
     $this->db->exec("INSERT INTO stats (user_agent, pageviews, total_bytes,updated_at) VALUES ('".$agent."', 1,".$bytes.",".time().")");
+    $this->db->exec("UPDATE stats SET pageviews = pageviews + 1, total_bytes = total_bytes + ".$bytes.",updated_at = ".time()." WHERE user_agent = '".$agent."' ");
 }
 
 
