@@ -82,7 +82,7 @@ if($page !== 'stats'){
 		<tr style="background-color: rgba(<?=(250-$c)?>,<?=(200-$c)?>,50,0.5);">
         <?php $totalBytes +=  $d['total_bytes']; $totalPageViews += $d['pageviews']; ?> 
         <td><?=$rank?></td>
-        <td><?=$d['user_agent']?> <?php if($d['user_agent'] != 'human'):?> (BOT)<?php endif ?></td>
+        <td><?=$d['user_agent']?></td>
             <td><?=$d['pageviews']?></th>
             <?php if($d['total_bytes']/1024/1024 > 1024): ?>
                 <td><?=round($d['total_bytes']/1024/1024/1024,3)?> <span class="text-red">!!GIGABYTES!!</span></th>
