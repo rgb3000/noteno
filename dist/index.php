@@ -1,10 +1,9 @@
 <?php
 //----------------------------------------------//----------------------------------------------
 
-require __DIR__ . '/vendor/autoload.php';
 include('class/RandomTextGenerator.php');
 include('class/Stats.php');
-
+include('class/CrawlerDetection.php');
 
 if(isset($_GET["p"])){
 	$page = $_GET["p"];
