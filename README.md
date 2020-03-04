@@ -9,10 +9,5 @@ But what would happen if a single website had an infinite number of subpages tha
 Get the code from github and start feeding...
 
 ## Install
-Via terminal:
-```
-git clone https://github.com/rgb3000/noteno
-````
-
-Or just download all files and upload to your webspace.
+Download all files from ```dist``` folder and upload to your webspace.
 
