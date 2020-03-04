@@ -119,7 +119,7 @@ if($page !== 'stats'){
                 <li>
                     <a href="/stats.html">statistics</a>
                 </li>
-                <li><a href="/about.html"></a></li>
+                <li><a href="/about.html">about</a></li>
             </ul>
         </nav>
     
