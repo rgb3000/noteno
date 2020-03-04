@@ -85,7 +85,7 @@ if($page !== 'stats'){
         <td><?=$d['user_agent']?> <?php if($d['user_agent'] != 'unresolved'):?> (BOT)<?php endif ?></td>
             <td><?=number_format($d['pageviews'],0,',','.')?></th>
             <?php if($d['total_bytes']/1024/1024 > 1024): ?>
-                <td><?=round($d['total_bytes']/1024/1024/1024,3)?> <span class="text-red">!!GIGABYTES!!</span></th>
+                <td><?=round($d['total_bytes']/1024/1024/1024,2)?> <span class="text-red">!!GIGABYTES!!</span></th>
             <?php else: ?>
             <td><?=round($d['total_bytes']/1024/1024,2)?> megabytes</th>
             <?php endif ?>
@@ -96,7 +96,7 @@ if($page !== 'stats'){
     <tr>
         <td><b>total</b></td>
         <td><b><?=$totalPageViews?></b></td>
-        <td><b><?=round($totalBytes/1024/1024/1024,3)?> GIGABYTES</b></td>
+        <td><b><?=round($totalBytes/1024/1024/1024,3)?> <span class="text-red">!!GIGABYTES!!</span></b></td>
     </tr>
     </table>
     
