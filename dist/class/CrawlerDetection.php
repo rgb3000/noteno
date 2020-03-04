@@ -189,16 +189,6 @@ class CrawlerDetect
 }
 
 
-/*
- *
- * (c) Mark Beech <m@rkbee.ch>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
-
-
 abstract class AbstractProvider
 {
     /**
@@ -218,15 +208,6 @@ abstract class AbstractProvider
     }
 }
 
-
-/*
- * This file is part of Crawler Detect - the web crawler detection library.
- *
- * (c) Mark Beech <m@rkbee.ch>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
 
 class Crawlers extends AbstractProvider
 {
@@ -1513,15 +1494,6 @@ class Crawlers extends AbstractProvider
 }
 
 
-/*
- *
- * (c) Mark Beech <m@rkbee.ch>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
-
 class Exclusions extends AbstractProvider
 {
     /**
@@ -1533,7 +1505,7 @@ class Exclusions extends AbstractProvider
     protected $data = array(
         'Safari.[\d\.]*',
         'Firefox.[\d\.]*',
-        'Chrome.[\d\.]*',
+        ' Chrome.[\d\.]*',
         'Chromium.[\d\.]*',
         'MSIE.[\d\.]',
         'Opera\/[\d\.]*',
@@ -1571,19 +1543,16 @@ class Exclusions extends AbstractProvider
         'Opera Mini\/\d{1,2}\.\d{1,2}\.[\d\.]*\/\d{1,2}\.',
         'Opera',
         ' \.NET[\d\.]*',
+        'cubot',
+        '; M bot',
+        '; CRONO',
+        '; B bot',
+        '; IDbot',
+        '; ID bot',
+        '; POWER BOT',
         ';', // Remove the following characters ;
     );
 }
-
-
-/*
- *
- * (c) Mark Beech <m@rkbee.ch>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
 
 
 class Headers extends AbstractProvider
@@ -1607,6 +1576,7 @@ class Headers extends AbstractProvider
         'HTTP_X_UCBROWSER_DEVICE_UA',
         // Sometimes, bots (especially Google) use a genuine user agent, but fill this header in with their email address
         'HTTP_FROM',
+        'HTTP_X_SCANNER', // Seen in use by Netsparker
     );
 }
 

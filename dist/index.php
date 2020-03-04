@@ -55,6 +55,9 @@ if($page !== 'stats'){
             list-style: none;
             padding-right: 30px;
         }
+        .text-red{
+            color:red;
+        }
 	</style>
 </head>
 <body>
@@ -68,25 +71,27 @@ if($page !== 'stats'){
     <p>amount of nonsense information successfully deliverd to humans and bots</p>
 	<table>
 	<tr>
-		<th>user</th>
+		<th>rank</th>
+        <th>user</th>
 		<th>pageviews</th>
         <th>data_volume_sent</th>
 		<th>last visit</th>
     </tr>
-    <?php $c = 0; $totalBytes = 0; $totalPageViews = 0; ?>
+    <?php $c = 0; $totalBytes = 0; $totalPageViews = 0; $rank = 1; ?>
 	<?php foreach($stats->getStatsData() as $d): ?>
 		<tr style="background-color: rgba(<?=(250-$c)?>,<?=(200-$c)?>,50,0.5);">
         <?php $totalBytes +=  $d['total_bytes']; $totalPageViews += $d['pageviews']; ?> 
+        <td><?=$rank?></td>
         <td><?=$d['user_agent']?> <?php if($d['user_agent'] != 'human'):?> (BOT)<?php endif ?></td>
             <td><?=$d['pageviews']?></th>
             <?php if($d['total_bytes']/1024/1024 > 1024): ?>
-                <td><?=round($d['total_bytes']/1024/1024/1024,3)?> !!GIGABYTES!!</th>
+                <td><?=round($d['total_bytes']/1024/1024/1024,3)?> <span class="text-red">!!GIGABYTES!!</span></th>
             <?php else: ?>
             <td><?=round($d['total_bytes']/1024/1024,2)?> megabytes</th>
             <?php endif ?>
             <td><?=date('Y-m-d H:i',$d['updated_at'])?></th>
         </tr>
-        <?php $c+=2; ?>
+        <?php $c+=2; $rank++; ?>
     <?php endforeach ?>
     <tr>
         <td><b>total</b></td>
