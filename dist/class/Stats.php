@@ -1,5 +1,6 @@
 <?php
 
+use Jaybizzle\CrawlerDetect\CrawlerDetect;
 Class Stats{
 
 private $db;
