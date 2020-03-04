@@ -83,7 +83,7 @@ if($page !== 'stats'){
         <?php $totalBytes +=  $d['total_bytes']; $totalPageViews += $d['pageviews']; ?> 
         <td><?=$rank?></td>
         <td><?=$d['user_agent']?> <?php if($d['user_agent'] != 'unresolved'):?> (BOT)<?php endif ?></td>
-            <td><?=$d['pageviews']?></th>
+            <td><?=number_format($d['pageviews'],0,',','.')?></th>
             <?php if($d['total_bytes']/1024/1024 > 1024): ?>
                 <td><?=round($d['total_bytes']/1024/1024/1024,3)?> <span class="text-red">!!GIGABYTES!!</span></th>
             <?php else: ?>
@@ -110,7 +110,7 @@ if($page !== 'stats'){
     <p>Search engines are extremely powerful machines. The algorithms behind these machines decide which information is considered relevant and comes into our field of vision. The basis of all search engines is the gathering of information. For this purpose, so-called bots or crawlers are used. These bots visit every page of the visible Internet at regular intervals and analyze and store the information that a website provides. The crawlers follow all links on a page and work their way through all subpages of a website.</p>
     <p>But what would happen if a single website had an infinite number of subpages that are all linked to each other? This is exactly what the project NOTENO does. The page itself consists of only a few kilobytes and less than 10 files, but offers an infinite number of pages that are all filled with total nonsense.</p>
     <p>
-    <b>Noteno is an open source project. Get the code from github and start feeding...</b><br><br>
+    <b>Noteno is an open source project. Get the code from github, copy it to your own webspace and start feeding...</b><br><br>
 
     <a href="https://github.com/rgb3000/noteno">https://github.com/rgb3000/noteno</a>
     </p>
