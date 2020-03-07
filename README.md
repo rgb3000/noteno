@@ -1,4 +1,4 @@
-# Noteno (non terminating nonsense)
+# NOTENO (non terminating nonsense)
 
 ![noteno screenshot animated](https://raw.githubusercontent.com/rgb3000/noteno/master/noteno.gif)
 
@@ -8,8 +8,9 @@ But what would happen if a single website had an infinite number of subpages tha
 
 Get the code from github and start feeding...
 
-## Demo:
+## Demos:
 [https://noteno.ralph-schulz.com](https://noteno.ralph-schulz.com)
+Add a link to your installation of NOTENO here!
 
 
 ## Install
