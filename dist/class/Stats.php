@@ -81,7 +81,7 @@ public function render(){
         <td><?=$d['user_agent']?> <?php if($d['user_agent'] != 'unresolved'):?> (BOT)<?php endif ?></td>
             <td><?=number_format($d['pageviews'],0,',','.')?></td>
             <?php if($d['total_bytes']/1024/1024 > 1024): ?>
-                <td><?=round($d['total_bytes']/1024/1024/1024,2)?> <span class="text-red">!!GIGABYTES!!</span></td>
+                <td><?=round($d['total_bytes']/1024/1024/1024,3)?> <span class="text-red">!!GIGABYTES!</span></td>
             <?php else: ?>
             <td><?=round($d['total_bytes']/1024/1024,2)?> megabytes</td>
             <?php endif ?>
@@ -93,7 +93,7 @@ public function render(){
         <td></td>
         <td><b>total</b></td>
         <td><b><?=number_format($totalPageViews,0,',','.')?></b></td>
-        <td><b><?=round($totalBytes/1024/1024/1024,3)?> <span class="text-red">!!GIGABYTES!!</span></b></td>
+        <td><b><?=round($totalBytes/1024/1024/1024,3)?> <span class="text-red">!!GIGABYTES!</span></b></td>
     </tr>
     </table>
 

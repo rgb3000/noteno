@@ -41,7 +41,8 @@ if($page !== 'stats'){
             border-collapse: collapse;
         }
 		td,th{
-			padding-right: 40px;
+			padding:2px 10px;
+            text-align: right;
 		}
         td{
             border: 1px solid green;
