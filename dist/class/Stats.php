@@ -64,7 +64,7 @@ public function getStatsData(){
 public function render(){
     $data = $this->getStatsData();
     ?>
-    <h3>amount of nonsense information successfully deliverd to humans and bots (october 2017)</h3>
+    <h3>amount of nonsense information successfully deliverd to humans and bots (since october 2017)</h3>
     <table>
 	<tr>
 		<th>rank</th>
