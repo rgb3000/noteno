@@ -35,6 +35,7 @@ if($page !== 'stats'){
 		body {
 			background-color: DarkSeaGreen;
 			font-family: monospace;
+            padding: 30px;
 		}
         table{
             border-collapse: collapse;
