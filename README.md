@@ -1,5 +1,6 @@
 # NOTENO (non terminating nonsense)
 
+![botfeed](https://raw.githubusercontent.com/rgb3000/noteno/master/botfeed.gif)
 ![noteno screenshot animated](https://raw.githubusercontent.com/rgb3000/noteno/master/noteno.gif)
 
 Search engines are extremely powerful machines. The algorithms behind these machines decide which information is considered relevant and comes into our field of vision. The basis of all search engines is the gathering of information. For this purpose, so-called bots or crawlers are used. These bots visit every page of the visible Internet at regular intervals and analyze and store the information that a website provides. The crawlers follow all links on a page and work their way through all subpages of a website.
