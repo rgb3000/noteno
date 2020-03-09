@@ -111,7 +111,7 @@ public function render(){
     <?php foreach($data['hitsPerMonth'] as $d): ?>
         <div class="d-flex" style="margin-bottom: 2px;">
             <div style="padding: 1px;padding-right: 20px;"><?=$d['id']?></div>
-            <div style="padding: 1px;background-color: rgba(<?=round($d['pageviews']/$maxHits*255)?>,150,100,0.5);width: <?=round($d['pageviews']/$maxHits*100)?>%"><?=$d['pageviews']?></div>
+            <div style="padding: 1px;background-color: rgba(<?=round($d['pageviews']/$maxHits*255)?>,50,50,0.5);width: <?=round($d['pageviews']/$maxHits*100)?>%"><?=$d['pageviews']?></div>
         </div>
     <?php endforeach ?>
     </div>

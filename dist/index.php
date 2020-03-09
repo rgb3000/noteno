@@ -30,7 +30,7 @@ if($page !== 'stats'){
 <html>
 <head>
 	<title>NOTENO - <?=$page?></title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
 			background-color: DarkSeaGreen;
